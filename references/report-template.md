@@ -73,7 +73,11 @@ Diagnosis:
 ## Evidence Checked
 - Pages sampled: <URLs>
 - Files checked: robots.txt <status>, sitemap.xml <status>, llms.txt <status>
+- Tool notes: <any fetch/browser/search disagreement worth mentioning>
 - Not automatically verified: <items>
+
+## Skill Self-Check
+- <optional: one pattern this audit revealed that the skill should handle better next time, or "No skill gaps observed.">
 ```
 
 ## Competitor Report
@@ -105,5 +109,6 @@ Diagnosis:
 
 - Explain technical terms the first time they appear.
 - Use "confirmed", "not found", "blocked", and "not automatically verified" precisely.
+- Keep tool failures separate from confirmed site defects.
 - Do not bury the top fixes under a long checklist.
 - Avoid fear-based language. Say what the issue affects and what to do next.

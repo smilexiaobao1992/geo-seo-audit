@@ -70,6 +70,7 @@ The skill asks Codex to gather public evidence itself, then produce:
 - Optimization suggestions grouped by developer, content, and business/marketing owner.
 - Evidence checked, including sampled pages and discovery files.
 - Items that could not be automatically verified.
+- A brief self-check note when the audit reveals a new pattern the skill should learn from.
 
 ## Notes And Limitations
 

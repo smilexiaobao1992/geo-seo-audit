@@ -82,6 +82,7 @@ The final answer should include:
 - Plain-language explanation for technical terms.
 - Evidence notes: sampled URLs, files checked, and items not automatically verified.
 - If comparing competitors, use a side-by-side score table and call out the highest-leverage gap.
+- A short skill self-check note when the audit reveals a pattern the skill should handle better next time.
 
 Use [references/report-template.md](references/report-template.md) for the recommended report shape.
 

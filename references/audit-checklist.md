@@ -13,6 +13,8 @@ Use this checklist as evidence guidance, not as a rigid pass/fail script.
 - Sitemap exists or the site has strong internal links that expose important pages.
 - Canonical URLs are present and do not point to unrelated pages.
 - Important pages return 200 status, not soft 404, redirect loops, or blocked responses.
+- Requested URLs, final URLs, canonical URLs, sitemap URLs, hreflang URLs, and `llms.txt` URLs agree on one canonical format.
+- Old platform paths or redesign leftovers are redirected or intentionally retired, not left for search engines to discover stale content.
 
 Plain language: "Can search engines enter the site, find the important pages, and show useful previews?"
 
@@ -45,6 +47,8 @@ Plain language: "Structured data is an ID card in the page source. It helps mach
 - Important content is available in text form without requiring user interaction.
 - Client-side JavaScript does not hide core claims, product details, prices, specs, addresses, or contact information from simple fetchers.
 - AI search/indexing user agents are not unintentionally blocked in robots.txt or WAF/CDN rules.
+- robots.txt does not contain conflicting duplicate rules for the same AI user agent, such as a managed block followed by a custom allow.
+- Named crawler checks separate search/index bots, user-triggered retrievers, and training bots instead of treating all AI bots the same.
 - `llms.txt` presence can be noted, but absence is not a Google Search defect.
 
 Plain language: "Can AI systems actually read the useful parts of the site?"
@@ -73,9 +77,15 @@ Plain language: "If the wider web confirms the company exists and does what it c
 
 Start from the rubric in `SKILL.md`, then adjust using business impact:
 
-- Critical: robots blocks, noindex, inaccessible homepage, important content missing from fetched/rendered page, severe title/content mismatch.
-- High: missing titles/descriptions across important pages, weak internal discovery, JS-only product content, no concrete evidence for major claims.
-- Medium: thin alt text, missing sitemap on small but otherwise crawlable site, limited third-party mentions, weak FAQ coverage.
+- Critical: robots blocks, noindex, inaccessible homepage confirmed by multiple methods, important content missing from fetched/rendered page, severe title/content mismatch.
+- High: canonical/sitemap/final URL drift across important pages, old indexed pages with stale prices or contact details, missing titles/descriptions across important pages, weak internal discovery, JS-only product content, no concrete evidence for major claims.
+- Medium: duplicate or conflicting AI crawler rules, thin alt text, missing sitemap on small but otherwise crawlable site, limited third-party mentions, weak FAQ coverage.
 - Low: optional schema enhancements, `llms.txt` experiment, minor copy improvements.
 
 Never score by checklist count alone. A single `Disallow: /` is more important than ten optional metadata issues.
+
+## Evidence Quality
+
+- Separate site defects from tool failures. A local TLS error, timeout, or sandbox denial is not a website issue unless a second method confirms it.
+- Prefer current fetched pages over old search snippets, but use snippets to discover stale indexed URL families that need redirects or deindexing.
+- When reporting old paths, include the observed old URL pattern and the recommended target or retirement behavior.
