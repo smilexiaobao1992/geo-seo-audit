@@ -69,12 +69,14 @@ Do not over-penalize items that cannot be verified automatically. Put them in an
 
 ### 5. Output
 
-Prefer a concise visual or card-style report when the environment provides a UI/rendering tool. If not, output structured Markdown that is easy to scan.
+Prefer a concise visual or card-style report when the environment provides a UI/rendering tool. If not, output polished Markdown that reads like a compact health report rather than a raw checklist.
 
 The final answer should include:
 
 - Overall grade and one-sentence diagnosis.
+- A compact score breakdown with short bars or aligned scores.
 - Top 2-3 fixes in priority order.
+- Optimization suggestions grouped by owner: content, developer, business/marketing.
 - SEO findings grouped as pass/warn/fail.
 - GEO/AI-search findings grouped as pass/warn/fail.
 - Plain-language explanation for technical terms.

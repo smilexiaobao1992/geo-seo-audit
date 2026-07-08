@@ -1,38 +1,76 @@
 # Report Template
 
-Use this shape for the final response. Keep it short enough for business users.
+Use this shape for the final response. Keep it short enough for business users while still feeling like a polished audit report.
+
+## Formatting Rules
+
+- Lead with the score, diagnosis, and top fixes before any checklist.
+- Use status labels consistently: `PASS`, `WARN`, `FAIL`, `INFO`, `UNCONFIRMED`.
+- Use compact tables for scanability.
+- Use short score bars when helpful: `SEO basics       18/25  [#######---]`.
+- Group optimization suggestions by owner so the user knows who should act.
+- Avoid dense paragraphs. One finding should usually be one sentence.
+- If the environment can render HTML/widgets, create a card-style visual report. If not, use the polished Markdown below.
 
 ## Single-Site Report
 
 ```markdown
-## <domain> SEO/GEO Audit
+# <domain> SEO/GEO Audit
 
-Overall: <A/B/C/D> (<score>/100)
-Diagnosis: <one plain-language sentence>
+Overall Grade: <A/B/C/D>  |  Score: <score>/100  |  Risk: <Low/Medium/High>
 
-### Priority Fixes
-1. <fix> — <why it matters> — <owner: content/dev/business>
-2. <fix> — <why it matters> — <owner>
-3. <fix> — <why it matters> — <owner>
+Diagnosis:
+<one plain-language sentence that explains the biggest SEO/GEO constraint.>
 
-### Traditional SEO
-| Item | Status | Plain-language finding |
+## Scorecard
+
+| Area | Score | Status | Plain-language meaning |
+|---|---:|---|---|
+| Crawl/index foundation | <n>/25 | PASS/WARN/FAIL | Can search engines and AI systems reach the important pages? |
+| Page-level SEO basics | <n>/25 | PASS/WARN/FAIL | Do pages clearly explain what they are about? |
+| GEO content readiness | <n>/30 | PASS/WARN/FAIL | Does the content contain facts AI systems can cite? |
+| Entity and third-party trust | <n>/10 | PASS/WARN/FAIL | Does the wider web confirm the brand is real and credible? |
+| Fix clarity and business impact | <n>/10 | PASS/WARN/FAIL | Are the next actions clear and worth doing first? |
+
+## Priority Fixes
+
+| Priority | Fix | Owner | Why it matters |
+|---:|---|---|---|
+| 1 | <highest-impact fix> | Developer/Content/Business | <plain-language impact> |
+| 2 | <second fix> | Developer/Content/Business | <plain-language impact> |
+| 3 | <third fix> | Developer/Content/Business | <plain-language impact> |
+
+## Traditional SEO
+
+| Item | Status | Finding | Recommended action |
 |---|---|---|
-| Crawl/index | Pass/Warn/Fail | ... |
-| Titles/descriptions | Pass/Warn/Fail | ... |
-| Sitemap/internal links | Pass/Warn/Fail | ... |
-| Structured data | Pass/Warn/Fail/Unconfirmed | ... |
+| Crawl/index | PASS/WARN/FAIL | <finding> | <action> |
+| Titles/descriptions | PASS/WARN/FAIL | <finding> | <action> |
+| Sitemap/internal links | PASS/WARN/FAIL | <finding> | <action> |
+| Structured data | PASS/WARN/FAIL/UNCONFIRMED | <finding> | <action> |
 
-### GEO / AI Search
-| Item | Status | Plain-language finding |
+## GEO / AI Search
+
+| Item | Status | Finding | Recommended action |
 |---|---|---|
-| AI crawler access | Pass/Warn/Fail/Unconfirmed | ... |
-| JS/rendering risk | Pass/Warn/Fail | ... |
-| Citable evidence | Pass/Warn/Fail | ... |
-| Entity trust | Pass/Warn/Fail | ... |
-| llms.txt | Info only | ... |
+| AI crawler access | PASS/WARN/FAIL/UNCONFIRMED | <finding> | <action> |
+| JS/rendering risk | PASS/WARN/FAIL | <finding> | <action> |
+| Citable evidence | PASS/WARN/FAIL | <finding> | <action> |
+| Entity trust | PASS/WARN/FAIL | <finding> | <action> |
+| llms.txt | INFO | <finding> | <action> |
 
-### Evidence Checked
+## Optimization Plan
+
+### Developer
+- <technical fix, expected impact, verification method>
+
+### Content
+- <content fix, expected impact, example of better wording/data>
+
+### Business / Marketing
+- <trust, third-party profile, reviews, case study, or entity consistency fix>
+
+## Evidence Checked
 - Pages sampled: <URLs>
 - Files checked: robots.txt <status>, sitemap.xml <status>, llms.txt <status>
 - Not automatically verified: <items>
@@ -41,7 +79,7 @@ Diagnosis: <one plain-language sentence>
 ## Competitor Report
 
 ```markdown
-## SEO/GEO Comparison
+# SEO/GEO Comparison
 
 | Area | Your Site | Competitor | Gap |
 |---|---:|---:|---|
@@ -50,7 +88,17 @@ Diagnosis: <one plain-language sentence>
 | GEO content readiness | <score> | <score> | <summary> |
 | Entity trust | <score> | <score> | <summary> |
 
-Biggest opportunity: <one action that gives the highest leverage>
+## Best Opportunity
+
+<one action that gives the highest leverage, written in plain language>
+
+## Action Plan
+
+| Priority | Your move | Why it beats/keeps up with competitor |
+|---:|---|---|
+| 1 | <action> | <reason> |
+| 2 | <action> | <reason> |
+| 3 | <action> | <reason> |
 ```
 
 ## Tone Rules

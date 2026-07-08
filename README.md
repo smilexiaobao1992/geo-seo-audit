@@ -62,10 +62,12 @@ Restart Codex or reload skills if your Codex surface supports skill reloads.
 
 The skill asks Codex to gather public evidence itself, then produce:
 
-- Overall grade and short diagnosis.
-- Top 2-3 priority fixes.
-- Traditional SEO findings.
-- GEO / AI-search findings.
+- A polished health-report style summary with grade, score, risk level, and one-line diagnosis.
+- A scorecard across crawl/index foundation, SEO basics, GEO content readiness, entity trust, and fix clarity.
+- Top 2-3 priority fixes in a table with owner and business impact.
+- Traditional SEO findings with status labels and recommended actions.
+- GEO / AI-search findings with status labels and recommended actions.
+- Optimization suggestions grouped by developer, content, and business/marketing owner.
 - Evidence checked, including sampled pages and discovery files.
 - Items that could not be automatically verified.
 
