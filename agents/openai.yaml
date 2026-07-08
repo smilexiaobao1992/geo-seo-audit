@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEO SEO Audit"
+  short_description: "Audit websites for SEO and AI-search readiness."
+  default_prompt: "Audit this website for SEO and GEO readiness: "
